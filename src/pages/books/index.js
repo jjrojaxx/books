@@ -1,5 +1,5 @@
-import Menu from "@/components/menu";
-import Books from "@/components/books";
+import Menu from "@/components/Menu";
+import Books from "@/components/Books";
 import { getItems } from "@/service/itemService";
 export default function books({ items }) {
   return (

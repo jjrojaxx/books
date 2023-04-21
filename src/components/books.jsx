@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ({ showAs, item }) {
+export default function Books({ showAs, item }) {
   if (showAs === "Page") {
     return (
       <div className="flex flex-col lg:flex-row">

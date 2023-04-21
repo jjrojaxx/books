@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Menu from "../components/menu";
+import Menu from "../components/Menu";
 const books = [
   {
     name: "El color perdido del bosque",
@@ -44,6 +44,7 @@ export default function Home() {
               src="/images/bookOne.jpg"
               height={900}
               width={900}
+              alt="Book"
               className="rounded-lg"
             />
           </div>
@@ -56,7 +57,7 @@ export default function Home() {
             </h3>
             <p className="text-gray-500 font-medium mb-8">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
@@ -73,7 +74,7 @@ export default function Home() {
         <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5">
           {books.map((book) => {
             return (
-              <div className="">
+              <div key={book.id}>
                 <Image
                   src={book.url_photo}
                   alt="Picture of the author"

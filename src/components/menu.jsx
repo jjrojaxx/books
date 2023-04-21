@@ -14,7 +14,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { useState } from "react";
-export default function menu() {
+export default function Menu() {
   const [show, setShow] = useState(true);
   const mostrar = () => {
     setShow(!show);
@@ -24,7 +24,7 @@ export default function menu() {
     setMostrar(!mostrarE);
   };
   return (
-    <div className="bg-zinc-900" >
+    <div className="bg-zinc-900">
       <div
         className={`${
           mostrarE ? "duration-700 oculto" : "duration-700 right-3"
@@ -37,6 +37,7 @@ export default function menu() {
               height="85"
               width="85"
               className="rounded-full"
+              alt="Perfil"
             />
           </div>
           <h2 className="font-bold text-lg leading-4 mt-3 text-black text-right">
@@ -93,6 +94,7 @@ export default function menu() {
                   src={Photo}
                   height={`${show ? 42 : 85}`}
                   width={`${show ? 42 : 85}`}
+                  alt="Perfil"
                   className={`rounded-full ${
                     show ? "duration-1000" : "duration-1000"
                   }`}
@@ -226,6 +228,7 @@ export default function menu() {
               src={Photo}
               height={`${show ? 38 : 85}`}
               width={`${show ? 38 : 85}`}
+              alt="Perfil"
               className={`rounded-full ${
                 show ? "duration-1000" : "duration-1000"
               }`}
