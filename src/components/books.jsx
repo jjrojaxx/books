@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { convertToPath } from "../lib/utils";
 
 export default function Books({ showAs, item }) {
   if (showAs === "Page") {
@@ -44,7 +45,7 @@ export default function Books({ showAs, item }) {
   }
   return (
     <div>
-      <Link href={`/books/${item.id}`}>
+      <Link href={`/books/${convertToPath(item.name)}`} key={item.id}>
         <Image
           src={item.url_photo}
           alt="Picture of the author"

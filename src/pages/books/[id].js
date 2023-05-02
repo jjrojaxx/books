@@ -11,7 +11,7 @@ export default function bookPage({ bookInfo }) {
       </div>
     </main>
   );
-}
+} 
 export async function getStaticPaths() {
   const paths = await getPathsFromIds();
   return {
